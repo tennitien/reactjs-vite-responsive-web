@@ -1,0 +1,96 @@
+:root {
+  --primaryColor: #fb923c;
+  --hoverPrimaryColor: #ea580c;
+  --whiteColor: #fff;
+  --blackColor: #111827;
+  --greyColor: #525252;
+  --greyBg: #f5f5f4;
+  --textColor: #71717a;
+  --input-color: #e4e4e7;
+}
+
+.home {
+  height: 70vh;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../../assets/land1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+.homeText {
+  text-align: center;
+  color: var(--whiteColor);
+}
+.homeText .title {
+  text-transform: capitalize;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  margin: 1rem;
+}
+.homeText .subText {
+  opacity: 0.9;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 1rem 0;
+  max-width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.homeForm {
+  width: 70%;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--whiteColor);
+  gap: 1rem;
+  justify-content: center;
+  position: absolute;
+  bottom: -35%;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+}
+.homeForm > * {
+  width: 100%;
+}
+.homeForm label {
+  display: block;
+  text-transform: capitalize;
+  color: var(--textColor);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.homeForm .input {
+  width: 100%;
+  margin-top: 0.3rem;
+  background-color: var(--input-color);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.homeForm .input::-moz-placeholder {
+  font-size: 1.3rem;
+  opacity: 0.7;
+  font-weight: normal;
+}
+.homeForm .input::placeholder {
+  font-size: 1.3rem;
+  opacity: 0.7;
+  font-weight: normal;
+}
+.homeForm .input:focus {
+  outline: 1px solid var(--primaryColor);
+}
+.homeForm .btn {
+  font-weight: 600;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=home.css.map */

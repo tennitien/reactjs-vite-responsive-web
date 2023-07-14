@@ -1,0 +1,113 @@
+:root {
+  --primaryColor: #fb923c;
+  --lightenPrimaryColor: #fde8d8;
+  --hoverPrimaryColor: #ea580c;
+  --whiteColor: #fff;
+  --blackColor: #111827;
+  --greyColor: #dad9d9;
+  --hoverGreyColor: #454343;
+  --greyBg: #f5f5f4;
+  --textColor: #71717a;
+  --input-color: #e4e4e7;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+.section {
+  padding: 4rem 0 2rem;
+}
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  align-items: center;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.btn {
+  padding: 0.4rem 1.5rem;
+  background-color: var(--primaryColor);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3rem;
+  color: var(--whiteColor);
+}
+.btn a {
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+.btn:hover a {
+  color: var(--whiteColor);
+}
+.btn:hover {
+  background-color: var(--hoverPrimaryColor);
+}
+.btn--submit {
+  padding: 1.1rem 1.8rem;
+}
+.secIntro {
+  max-width: 70%;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0 auto 2rem;
+}
+.secIntro .secTitle {
+  color: var(--blackColor);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.secIntro p {
+  font-size: 13px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+input {
+  font-size: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (min-width: 556px) {
+  .mainContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}

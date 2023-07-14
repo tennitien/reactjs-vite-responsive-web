@@ -1,0 +1,107 @@
+:root {
+  --primaryColor: #fb923c;
+  --hoverPrimaryColor: #ea580c;
+  --whiteColor: #fff;
+  --blackColor: #111827;
+  --greyColor: #dad9d9;
+  --hoverGreyColor: #454343;
+  --greyBg: #f5f5f4;
+  --textColor: #71717a;
+  --input-color: #e4e4e7;
+}
+.offer {
+  &-main {
+    gap: 2rem;
+  }
+  &__single {
+    gap: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 0.5rem;
+    box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.189);
+
+    transition: transform 0.4s;
+
+    .icon {
+      font-size: 20px;
+      color: var(--textColor);
+    }
+
+    small {
+      font-weight: 500;
+      color: var(--textColor);
+    }
+    &--des {
+      position: relative;
+      height: 200px;
+      width: 100%;
+      border-radius: 10px;
+      background-color: cadetblue;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+      }
+      .discount {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--whiteColor);
+        background-color: var(--primaryColor);
+        border-radius: 100px;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    &--body {
+      padding: 1rem;
+
+      .price {
+        justify-content: space-between;
+
+        h4 {
+          font-size: 1.5rem;
+        }
+        .status {
+          padding: 5px 10px;
+          background-color: var(--greyColor);
+          border-radius: 100px;
+          color: var(--hoverPrimaryColor);
+        }
+      }
+
+      .amenities {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 1rem 0;
+        gap: 1rem;
+
+        width: 100%;
+      }
+
+      .amenities__single {
+        gap: 0.5rem;
+        border-radius: 100px;
+        padding: 0.3rem 0.5rem;
+        background-color: var(--greyBg);
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-top: 1rem;
+        .icon {
+          color: var(--whiteColor);
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+}
