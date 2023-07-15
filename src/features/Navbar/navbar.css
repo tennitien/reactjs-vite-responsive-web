@@ -45,8 +45,7 @@
     position: absolute;
     top: 0;
     left: 120%;
-    height: -moz-max-content;
-    height: max-content;
+    height: 100vh;
     padding: 1rem;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -56,8 +55,9 @@
     visibility: hidden;
   }
   .navLists {
+    padding-top: 10rem;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: auto;
   }

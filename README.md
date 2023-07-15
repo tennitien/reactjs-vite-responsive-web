@@ -1,10 +1,26 @@
-touch blog.scss footer.scss home.scss navbar.scss offers.scss popular.scss
+# Responsive react Travel with Vite
+
+# Review
+
+## Laptop
+
+![](./imgReview/Laptop.png)
+
+## Ipad
+
+![](./imgReview/ipad.png)
+
+## Mobile
+
+![](./imgReview/phone-home.png)
+![](./imgReview/phone-poppular.png)
 
 # Build with
 
 - [Vitejs](https://vitejs.dev/)
-- [RouterV6](https://reactrouter.com/en/main)
+- React-icon
 - Image from Pexels or Unsplash
+- [Aos Library for Animations](https://michalsnik.github.io/aos/)
 
 # Install
 
@@ -40,8 +56,6 @@ module.exports = {
 ```
 
 ### AOS - animation
-
-- [AOS](https://michalsnik.github.io/aos/)
 
 ```
 npm install aos --save

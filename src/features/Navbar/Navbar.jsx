@@ -30,18 +30,6 @@ function Navbar() {
     return () => window.removeEventListener('scroll', addBgHeader);
   }, []);
 
-  // useEffect(() => {
-  //   const hiddenNb = () => {
-  //     if (screen.scrollX > 768) {
-  //       setActiveNavbar('navbarActive');
-  //     } else {
-  //       setActiveNavbar('');
-  //     }
-  //   };
-  //   window.addEventListener('scroll', hiddenNb);
-
-  //   return () => window.removeEventListener('scroll', hiddenNb);
-  // }, []);
   return (
     <>
       <section className='navbarSection'>
