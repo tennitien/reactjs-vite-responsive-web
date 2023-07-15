@@ -80,7 +80,7 @@ li {
   padding: 1.1rem 1.8rem;
 }
 .secIntro {
-  max-width: 70%;
+  min-width: 70%;
   text-align: center;
   text-transform: capitalize;
   margin: 0 auto 2rem;
@@ -95,6 +95,14 @@ li {
   color: var(--textColor);
   font-weight: 500;
 }
+.title {
+  font-size: 3rem;
+  color: var(--blackColor);
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
 img,
 video {
   width: 100%;
@@ -107,6 +115,7 @@ input {
 
 @media screen and (min-width: 556px) {
   .mainContent {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }

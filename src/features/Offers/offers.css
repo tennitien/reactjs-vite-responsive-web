@@ -10,10 +10,10 @@
   --input-color: #e4e4e7;
 }
 
-.offer-main {
+.offer .mainContent {
   gap: 2rem;
 }
-.offer__single {
+.offer .singleOffer {
   gap: 1rem;
   border-radius: 1rem;
   overflow: hidden;
@@ -21,15 +21,15 @@
   box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.189);
   transition: transform 0.4s;
 }
-.offer__single .icon {
+.offer .singleOffer .icon {
   font-size: 20px;
   color: var(--textColor);
 }
-.offer__single small {
+.offer .singleOffer small {
   font-weight: 500;
   color: var(--textColor);
 }
-.offer__single--des {
+.offer .singleOffer .destImg {
   position: relative;
   height: 200px;
   width: 100%;
@@ -37,10 +37,10 @@
   background-color: cadetblue;
   overflow: hidden;
 }
-.offer__single--des img {
+.offer .singleOffer .destImg img {
   height: 100%;
 }
-.offer__single--des .discount {
+.offer .singleOffer .destImg .discount {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -51,43 +51,43 @@
   border-radius: 100px;
   padding: 0.5rem 1rem;
 }
-.offer__single--body {
+.offer .singleOffer .offerBody {
   padding: 1rem;
 }
-.offer__single--body .price {
+.offer .singleOffer .offerBody .price {
   justify-content: space-between;
 }
-.offer__single--body .price h4 {
+.offer .singleOffer .offerBody .price h4 {
   font-size: 1.5rem;
 }
-.offer__single--body .price .status {
+.offer .singleOffer .offerBody .price .status {
   padding: 5px 10px;
   background-color: var(--greyColor);
   border-radius: 100px;
   color: var(--hoverPrimaryColor);
 }
-.offer__single--body .amenities {
+.offer .singleOffer .offerBody .amenities {
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 1rem 0;
   gap: 1rem;
   width: 100%;
 }
-.offer__single--body .amenities__single {
+.offer .singleOffer .offerBody .singleAmenity {
   gap: 0.5rem;
   border-radius: 100px;
   padding: 0.3rem 0.5rem;
   background-color: var(--greyBg);
 }
-.offer__single--body .btn {
+.offer .singleOffer .offerBody .btn {
   width: 100%;
   text-align: center;
   justify-content: center;
   margin-top: 1rem;
 }
-.offer__single--body .btn .icon {
+.offer .singleOffer .offerBody .btn .icon {
   color: var(--whiteColor);
 }
-.offer__single:hover {
+.offer .singleOffer:hover {
   transform: translateY(-10px);
 }/*# sourceMappingURL=offers.css.map */

@@ -10,10 +10,10 @@
   --input-color: #e4e4e7;
 }
 .offer {
-  &-main {
+  .mainContent {
     gap: 2rem;
   }
-  &__single {
+  .singleOffer {
     gap: 1rem;
     border-radius: 1rem;
     overflow: hidden;
@@ -31,7 +31,7 @@
       font-weight: 500;
       color: var(--textColor);
     }
-    &--des {
+    .destImg {
       position: relative;
       height: 200px;
       width: 100%;
@@ -56,7 +56,7 @@
       }
     }
 
-    &--body {
+    .offerBody {
       padding: 1rem;
 
       .price {
@@ -82,7 +82,7 @@
         width: 100%;
       }
 
-      .amenities__single {
+      .singleAmenity {
         gap: 0.5rem;
         border-radius: 100px;
         padding: 0.3rem 0.5rem;

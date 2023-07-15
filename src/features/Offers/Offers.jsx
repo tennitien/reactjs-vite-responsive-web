@@ -64,8 +64,8 @@ const DATA_OFFERS = [
   },
 ];
 function Offers() {
-  const amenities = DATA_AMENTITIES.map((amen, index) => (
-    <div className='amenities__single flex' key={index}>
+  const singleAmenity = DATA_AMENTITIES.map((amen, index) => (
+    <div className='singleAmenity flex' key={index}>
       {amen.icon}
       <small>{amen.small}</small>
     </div>
@@ -74,9 +74,9 @@ function Offers() {
   return (
     <>
       <section className='offer container section'>
-        <div className='offer-container'>
+        <div className='secContainer'>
           <div className='secIntro'>
-            <h2 className='secTitle'>special offer</h2>
+            <h2 className='secTitle title'>special offer</h2>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
               odit dicta dolorem, laborum, magni eum rem tempore doloremque
@@ -85,22 +85,21 @@ function Offers() {
             </p>
           </div>
 
-          <div className='offer-main mainContent grid'>
-            {/* <div className='offer__single'> */}
+          <div className='mainContent grid'>
             {DATA_OFFERS.map((offer, index) => (
-              <div className='offer__single' key={index}>
-                <div className='offer__single--des'>
+              <div className='singleOffer' key={index}>
+                <div className='destImg'>
                   <img src={offer.imgSrc} alt='' />
                   <span className='discount'>{offer.discount}% offer</span>
                 </div>
 
-                <div className='offer__single--body'>
+                <div className='offerBody'>
                   <div className='price flex'>
                     <h4>${offer.price}</h4>
                     <span className='status'>{offer.forRent}</span>
                   </div>
 
-                  <div className='amenities flex'>{amenities}</div>
+                  <div className='amenities flex'>{singleAmenity}</div>
 
                   <div className='location flex'>
                     <MdLocationOn className='icon' />

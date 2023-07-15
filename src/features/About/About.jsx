@@ -27,24 +27,24 @@ const About = () => {
   return (
     <>
       <section className='about section'>
-        <div className='about-container secContainer'>
+        <div className='secContainer'>
           <h3 className='title'>why hikings?</h3>
 
-          <div className='about-main mainContent grid container'>
+          <div className='mainContent grid container'>
             {DATA_ABOUT.map((item, index) => (
-              <div className='about-main__single' key={index}>
+              <div className='singleItem' key={index}>
                 <img src={item.imgSrc} alt='' />
 
-                <h3 className='about__single--title'>{item.title}</h3>
+                <h3>{item.title}</h3>
 
                 <p>{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className='about-video container'>
-            <div className='about-video__content grid'>
-              <div className='text'>
+          <div className='videoCard container'>
+            <div className='cardContent grid'>
+              <div className='cardText'>
                 <h2>Wonderful House experience in there!</h2>
 
                 <p>
@@ -55,7 +55,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div className='video'>
+              <div className='cardVideo'>
                 <video src={video} autoPlay loop muted type='video/mp4'></video>
               </div>
             </div>
