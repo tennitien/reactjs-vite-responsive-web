@@ -13,22 +13,35 @@ const navLinks = [
 ];
 function Navbar() {
   const [activeNavbar, setActiveNavbar] = useState('');
+  const [activeHeader, setActiveHeader] = useState('');
+
   const showNavbar = () => setActiveNavbar('navbarActive');
   const hiddenNavbar = () => setActiveNavbar('');
-  const [activeHeader, setActiveHeader] = useState('');
   useEffect(() => {
-    const addBg = () => {
+    const addBgHeader = () => {
       if (window.scrollY > 200) {
         setActiveHeader('headerActive');
       } else {
         setActiveHeader('');
       }
     };
+    window.addEventListener('scroll', addBgHeader);
 
-    window.addEventListener('scroll', addBg);
-
-    return () => window.removeEventListener('scroll', addBg);
+    return () => window.removeEventListener('scroll', addBgHeader);
   }, []);
+
+  // useEffect(() => {
+  //   const hiddenNb = () => {
+  //     if (screen.scrollX > 768) {
+  //       setActiveNavbar('navbarActive');
+  //     } else {
+  //       setActiveNavbar('');
+  //     }
+  //   };
+  //   window.addEventListener('scroll', hiddenNb);
+
+  //   return () => window.removeEventListener('scroll', hiddenNb);
+  // }, []);
   return (
     <>
       <section className='navbarSection'>

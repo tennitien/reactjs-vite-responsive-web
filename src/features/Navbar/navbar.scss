@@ -3,6 +3,7 @@
   --hoverPrimaryColor: #ea580c;
   --whiteColor: #fff;
   --blackColor: #111827;
+
   --greyColor: #525252;
   --greyBg: #f5f5f4;
   --textColor: #71717a;
@@ -44,29 +45,22 @@
     }
   }
 }
-.navbarActive {
-  left: 0; //animation
-  visibility: visible;
-}
-.headerActive {
-  background: #bfbebf;
-  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.3);
-}
+
 @media screen and (max-width: 768px) {
   .navbar {
     background-color: var(--greyBg);
     position: absolute;
     top: 0;
-    left: 500%; //animation
+    left: 120%; //animation
     height: max-content;
     padding: 1rem;
     width: 100%;
 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s;
+    transition: all 0.4s ease-in;
     z-index: 1000;
 
-    // opacity: 0;
+    opacity: 0.5;
     visibility: hidden;
   }
 
@@ -82,7 +76,7 @@
 
     .navLink {
       color: var(--textColor);
-      font-size: 0.9rem;
+      font-size: 1.5rem;
       font-weight: 600;
       &:hover {
         color: var(--primaryColor);
@@ -129,40 +123,48 @@
     }
   }
 }
+.navbarActive {
+  opacity: 1;
+  left: 0; //animation
+  visibility: visible;
+}
+.headerActive {
+  background: var(--headerBg);
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.3);
+}
 
 @media screen and (min-width: 769px) {
   .header {
     padding: 1.5rem 2rem !important;
   }
-  .navbar {
-    &__toggle,
-    &__close {
-      display: none;
+
+  .closeNavbar,
+  .toggleNavbar {
+    display: none;
+  }
+
+  .navLists {
+    gap: 1.5rem;
+    .navLink {
+      color: var(--whiteColor);
+      &:hover {
+        color: var(--whiteColor);
+        padding-bottom: 2px;
+        border-bottom: 2px var(--primaryColor) solid;
+      }
     }
 
-    &__lists {
+    .headerBtns {
+      margin-left: 2rem;
       gap: 1rem;
-      &--link {
-        color: var(--whiteColor);
+
+      .loginBtn {
+        background: none;
+        border: 1px solid var(--primaryColor);
         &:hover {
+          background-color: var(--hoverPrimaryColor);
           color: var(--whiteColor);
-          padding-bottom: 2px;
-          border-bottom: 2px var(--primaryColor) solid;
-        }
-      }
-
-      &--btns {
-        margin-left: 2rem;
-        gap: 0.5rem;
-
-        .loginBtn {
-          background: none;
-          border: 1px solid var(--primaryColor);
-          &:hover {
-            background-color: var(--hoverPrimaryColor);
-            color: var(--whiteColor);
-            border: 1px solid var(--hoverPrimaryColor);
-          }
+          border: 1px solid var(--hoverPrimaryColor);
         }
       }
     }

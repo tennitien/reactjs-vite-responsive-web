@@ -16,13 +16,54 @@
 
     .singlePost {
       gap: 2rem;
-
+      background-color: var(--greyBg);
+      padding: 1rem;
+      border-radius: 10px;
       .imgDiv {
         height: 200px;
         width: 100%;
-        border-radius: 1rem;
-        box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        box-shadow: 0 2px 6px 0px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        &:hover {
+          img {
+            transform: scale(1.1);
+            transition: all 0.4s ease;
+          }
+        }
       }
+
+      .postDetails {
+        h3 {
+          font-size: 2rem;
+          margin-bottom: 0.7rem;
+        }
+        p {
+          opacity: 0.8;
+          font-size: 1.3rem;
+        }
+      }
+      .postLink {
+        color: var(--primaryColor);
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+
+        width: max-content;
+        border-radius: 100px;
+        &:hover {
+          background-color: var(--hoverGreyColor);
+          color: var(--whiteColor);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 884px) {
+  .blog {
+    .mainContainer {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

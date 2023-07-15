@@ -39,29 +39,20 @@
   font-size: 25px;
 }
 
-.navbarActive {
-  left: 0;
-  visibility: visible;
-}
-
-.headerActive {
-  background: #bfbebf;
-  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.3);
-}
-
 @media screen and (max-width: 768px) {
   .navbar {
     background-color: var(--greyBg);
     position: absolute;
     top: 0;
-    left: 500%;
+    left: 120%;
     height: -moz-max-content;
     height: max-content;
     padding: 1rem;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s;
+    transition: all 0.4s ease-in;
     z-index: 1000;
+    opacity: 0.5;
     visibility: hidden;
   }
   .navLists {
@@ -75,7 +66,7 @@
   }
   .navLists .navLink {
     color: var(--textColor);
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 600;
   }
   .navLists .navLink:hover {
@@ -115,33 +106,45 @@
     cursor: pointer;
   }
 }
+.navbarActive {
+  opacity: 1;
+  left: 0;
+  visibility: visible;
+}
+
+.headerActive {
+  background: var(--headerBg);
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
 @media screen and (min-width: 769px) {
   .header {
     padding: 1.5rem 2rem !important;
   }
-  .navbar__toggle, .navbar__close {
+  .closeNavbar,
+  .toggleNavbar {
     display: none;
   }
-  .navbar__lists {
-    gap: 1rem;
+  .navLists {
+    gap: 1.5rem;
   }
-  .navbar__lists--link {
+  .navLists .navLink {
     color: var(--whiteColor);
   }
-  .navbar__lists--link:hover {
+  .navLists .navLink:hover {
     color: var(--whiteColor);
     padding-bottom: 2px;
     border-bottom: 2px var(--primaryColor) solid;
   }
-  .navbar__lists--btns {
+  .navLists .headerBtns {
     margin-left: 2rem;
-    gap: 0.5rem;
+    gap: 1rem;
   }
-  .navbar__lists--btns .loginBtn {
+  .navLists .headerBtns .loginBtn {
     background: none;
     border: 1px solid var(--primaryColor);
   }
-  .navbar__lists--btns .loginBtn:hover {
+  .navLists .headerBtns .loginBtn:hover {
     background-color: var(--hoverPrimaryColor);
     color: var(--whiteColor);
     border: 1px solid var(--hoverPrimaryColor);

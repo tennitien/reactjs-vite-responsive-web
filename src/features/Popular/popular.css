@@ -134,4 +134,12 @@
 }
 .popular .mainContent .singleDestination:hover .overplayInfo {
   height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .popular .secHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }/*# sourceMappingURL=popular.css.map */

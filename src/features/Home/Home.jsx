@@ -1,22 +1,33 @@
 import './home.css';
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 function Home() {
   const company = 'dot';
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
       <section className='home'>
         <div className='secContainer container'>
           <div className='homeText'>
-            <h1 className='title'>
+            <h1 data-aos='fade-up' className='title'>
               {`plan your trip with travel ${company}`}{' '}
             </h1>
-            <p className='subTitle'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              ab dolorem cumque! Suscipit vel laboriosam ad accusamus doloribus,
-              est voluptatum, aliquam nostrum quam ipsam hic numquam architecto
-              totam, ab sequi!
+            <p data-aos='fade-up' data-aos-duration='2500' className='subTitle'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
 
-            <button className='btn btn--submit'>
+            <button
+              data-aos='fade-up'
+              data-aos-duration='3000'
+              className='btn btn--submit'
+            >
               <a href='#'>Explore Now</a>
             </button>
           </div>
@@ -39,7 +50,6 @@ function Home() {
               Search
             </button>
           </form>
-          {/* </div> */}
         </div>
       </section>
     </>

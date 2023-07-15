@@ -1,1 +1,97 @@
-/*# sourceMappingURL=footer.css.map */
+:root {
+  --primaryColor: #fb923c;
+  --lightenPrimaryColor: #fde8d8;
+  --hoverPrimaryColor: #ea580c;
+  --whiteColor: #fff;
+  --blackColor: #111827;
+  --greyColor: #dad9d9;
+  --hoverGreyColor: #454343;
+  --greyBg: #f5f5f4;
+  --textColor: #71717a;
+  --input-color: #e4e4e7;
+}
+
+.footer {
+  background-color: var(--footerBg);
+  padding: 2rem 0;
+}
+.footer .secContainer {
+  gap: 1.5rem;
+  text-align: center;
+  grid-template-rows: repeat(2, 1fr);
+}
+.footer .secContainer .logoDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .secContainer .logoDiv .footerLogo {
+  padding-bottom: 2rem;
+}
+.footer .secContainer .logoDiv .footerLogo .logo {
+  color: var(--whiteColor);
+  font-size: 1.5rem;
+}
+.footer .secContainer .logoDiv .footerLogo .logo .icon {
+  font-size: 5rem;
+  margin-right: 1rem;
+}
+.footer .secContainer .logoDiv .socials {
+  color: var(--whiteColor);
+  opacity: 0.8;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .secContainer .logoDiv .socials h3 {
+  opacity: 1;
+}
+.footer .secContainer .logoDiv .socials .socialsIcons {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer .secContainer .logoDiv .socials .socialsIcons .facebook:hover,
+.footer .secContainer .logoDiv .socials .socialsIcons .twitter:hover,
+.footer .secContainer .logoDiv .socials .socialsIcons .linkedin:hover {
+  color: #0194f3;
+}
+.footer .secContainer .logoDiv .socials .socialsIcons .instagram {
+  border-radius: 3px;
+}
+.footer .secContainer .logoDiv .socials .socialsIcons .instagram:hover {
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.footer .secContainer .logoDiv .socials .socialsIcons .youtube:hover {
+  color: red;
+}
+.footer .secContainer .footerLinks {
+  color: var(--whiteColor);
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer .secContainer .footerLinks h3 {
+  margin-bottom: 1rem;
+}
+.footer .secContainer .footerLinks li {
+  margin-bottom: 0.5rem;
+}
+.footer .secContainer .footerLinks a {
+  color: var(--whiteColor);
+  opacity: 0.8;
+}
+.footer .secContainer .footerLinks a:hover {
+  border-bottom: 1px solid var(--primaryColor);
+}
+
+@media screen and (min-width: 768px) {
+  .footer .secContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: start;
+    align-items: start;
+    gap: 20rem;
+  }
+  .footer .secContainer .logoDiv,
+  .footer .secContainer .footerLinks {
+    width: 100%;
+  }
+}/*# sourceMappingURL=footer.css.map */

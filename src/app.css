@@ -4,6 +4,8 @@
   --hoverPrimaryColor: #ea580c;
   --whiteColor: #fff;
   --blackColor: #111827;
+  --headerBg: #525252;
+  --footerBg: #1c2930;
   --greyColor: #dad9d9;
   --hoverGreyColor: #454343;
   --greyBg: #f5f5f4;
@@ -38,10 +40,7 @@ li {
 .section {
   padding: 4rem 0 2rem;
 }
-.container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
+
 .icon {
   font-size: 2rem;
   cursor: pointer;
@@ -65,8 +64,10 @@ li {
   cursor: pointer;
   border-radius: 3rem;
   color: var(--whiteColor);
+  font-size: 1.5rem;
 }
 .btn a {
+  font-size: 1.5rem;
   color: var(--whiteColor);
   font-weight: 500;
 }
@@ -78,6 +79,10 @@ li {
 }
 .btn--submit {
   padding: 1.1rem 1.8rem;
+}
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .secIntro {
   min-width: 70%;
@@ -91,11 +96,12 @@ li {
   padding-bottom: 0.5rem;
 }
 .secIntro p {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: var(--textColor);
   font-weight: 500;
 }
 .title {
+  text-transform: capitalize;
   font-size: 3rem;
   color: var(--blackColor);
   line-height: 1.5rem;
@@ -114,9 +120,72 @@ input {
 }
 
 @media screen and (min-width: 556px) {
-  .mainContent {
+  .mainContent,
+  .singlePost {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+}
+
+@media screen and (min-width: 884px) {
+  html {
+    font-size: 70%;
+  }
+  .mainContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 75% !important;
+    margin: auto;
+  }
+
+  .section {
+    padding: 5rem 0 3rem;
+  }
+  .secIntro {
+    margin: 0 auto 3rem;
+  }
+
+  .secIntro .secTitle {
+    line-height: 2rem;
+    padding-bottom: 1rem;
+    /* font-size: 2.2rem; */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mainContent {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.5;
+  }
+}
+
+/* Page Design */
+::selection {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+::-moz-w ::-webkit-scrollbar {
+  width: 10px;
+  /* height: 10px; */
+  background-color: var(--primaryColor);
+}
+::-webkit-scrollbar-thumb {
+  /* background-image: linear-gradient(
+    to bottom,
+    rgba(251, 146, 60, 0.4),
+    rgba(251, 146, 60, 0.8)
+  ); */
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  cursor: pointer;
 }

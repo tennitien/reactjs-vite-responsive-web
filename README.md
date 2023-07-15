@@ -22,13 +22,6 @@ npm i eslint vite-plugin-eslint eslint-config-react-app --save-dev
 npm run dev
 ```
 
-## Tailwindcss for Vite
-
-```
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
 ### Prettier
 
 [Link](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
@@ -44,4 +37,19 @@ module.exports = {
   plugins: [require('prettier-plugin-tailwindcss')],
 }
 
+```
+
+### AOS - animation
+
+- [AOS](https://michalsnik.github.io/aos/)
+
+```
+npm install aos --save
+```
+
+**use**
+
+```
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 ```

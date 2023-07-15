@@ -5,6 +5,7 @@ import Popular from './features/Popular/Popular';
 import Offers from './features/Offers/Offers';
 import About from './features/About/About';
 import Blog from './features/Blog/Blog';
+import Footer from './features/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Offers />
       <About />
       <Blog />
+      <Footer />
     </>
   );
 }

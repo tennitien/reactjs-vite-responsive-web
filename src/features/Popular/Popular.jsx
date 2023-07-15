@@ -3,6 +3,9 @@ import { BsArrowRightShort, BsArrowLeftShort, BsDot } from 'react-icons/bs';
 import imgHanoi from '../../assets/popular-hanoi.jpeg';
 import imgPhongNhaKeBang from '../../assets/popular-phongnhakebang.jpeg';
 import imgRbt from '../../assets/popular-ruongbacthang.jpeg';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const DATA_DESTINATION = [
   {
@@ -26,30 +29,47 @@ const DATA_DESTINATION = [
     msg: 'Ruong bac thang',
     desciption: 'Lorem is ipsum',
   },
+  {
+    id: '04',
+    imgSrc: imgRbt,
+    destination: 'Ha Giang',
+    msg: 'Ruong bac thang',
+    desciption: 'Lorem is ipsum',
+  },
 ];
 
 function Popular() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <section className='popular container'>
+    <section className='popular container '>
       <div className='secContainer'>
         <div className='secHeader flex'>
-          <div className='textDiv'>
+          <div
+            className='textDiv'
+            data-aos='fade-right'
+            data-aos-duration='2500'
+          >
             <h2 className='title'>Popular</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              minus obcaecati eaque corrupti, cum esse. Nostrum totam voluptas
-              tempora autem? Aut, recusandae officiis ab sapiente ipsa sit nihil
-              perspiciatis rem.
-            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
           </div>
 
-          <div className='iconsDiv flex'>
+          <div
+            className='iconsDiv flex'
+            data-aos='fade-left'
+            data-aos-duration='2500'
+          >
             <BsArrowLeftShort className='icon left' />
             <BsArrowRightShort className='icon' />
           </div>
         </div>
 
-        <div className='mainContent gird'>
+        <div
+          className='mainContent gird'
+          data-aos='fade-up'
+          data-aos-duration='3000'
+        >
           {DATA_DESTINATION.map((item, index) => (
             <div className='singleDestination' key={index}>
               <div className='destImg'>

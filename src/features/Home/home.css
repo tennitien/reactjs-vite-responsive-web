@@ -26,22 +26,19 @@
   color: var(--whiteColor);
 }
 .homeText .title {
-  text-transform: capitalize;
-  font-size: 2.3rem;
-  font-weight: 700;
-  line-height: 2.5rem;
+  color: var(--whiteColor);
+  line-height: 3.3rem;
   word-spacing: 2px;
-  letter-spacing: 2px;
   margin: 1rem;
 }
-.homeText .subText {
+.homeText .subTitle {
   opacity: 0.9;
   font-size: 1.3rem;
   font-weight: 400;
   padding: 1rem 0;
   max-width: 70%;
   text-align: center;
-  margin: 0 auto;
+  margin: 0rem auto;
 }
 
 .homeForm {
@@ -52,7 +49,7 @@
   gap: 1rem;
   justify-content: center;
   position: absolute;
-  bottom: -35%;
+  bottom: -25%;
   left: 50%;
   transform: translate(-50%);
   box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
@@ -91,6 +88,39 @@
   outline: 1px solid var(--primaryColor);
 }
 .homeForm .btn {
+  display: flex;
+  justify-content: center;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+@media screen and (min-width: 480px) {
+  .homeForm {
+    bottom: -10rem;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .homeForm .btn {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+  }
+}
+@media screen and (min-width: 556px) {
+  .home .homeText .title {
+    font-size: 3.3rem;
+  }
+  .home .homeText .subTitle {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .homeForm {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .homeForm .btn {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
 }/*# sourceMappingURL=home.css.map */

@@ -3,8 +3,12 @@ import imgMountain from '../../assets/abou1-mountain.svg';
 import imgHiking from '../../assets/abou2-hiking.svg';
 import imgAvatar from '../../assets/abou3-avatar.svg';
 
-// todo: 1:40:00
 import video from '../../assets/video.mp4';
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const DATA_ABOUT = [
   {
     imgSrc: imgMountain,
@@ -24,13 +28,22 @@ const DATA_ABOUT = [
 ];
 
 const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
       <section className='about section'>
         <div className='secContainer'>
-          <h3 className='title'>why hikings?</h3>
+          <h3 className='title' data-aos='fade-up' data-aos-duration='2500'>
+            why hikings?
+          </h3>
 
-          <div className='mainContent grid container'>
+          <div
+            className='mainContent grid container'
+            data-aos='fade-up'
+            data-aos-duration='3000'
+          >
             {DATA_ABOUT.map((item, index) => (
               <div className='singleItem' key={index}>
                 <img src={item.imgSrc} alt='' />
@@ -44,7 +57,11 @@ const About = () => {
 
           <div className='videoCard container'>
             <div className='cardContent grid'>
-              <div className='cardText'>
+              <div
+                className='cardText'
+                data-aos='fade-right'
+                data-aos-duration='2500'
+              >
                 <h2>Wonderful House experience in there!</h2>
 
                 <p>
@@ -55,7 +72,11 @@ const About = () => {
                 </p>
               </div>
 
-              <div className='cardVideo'>
+              <div
+                className='cardVideo'
+                data-aos='fade-left'
+                data-aos-duration='2500'
+              >
                 <video src={video} autoPlay loop muted type='video/mp4'></video>
               </div>
             </div>
